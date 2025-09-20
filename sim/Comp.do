@@ -2,7 +2,7 @@
 proc comp {filename} {
   if {[file exists ${filename}] == 1} {
    puts "## vcom $filename"
-   vlog -quiet ${filename} -work work -lint
+   vlog +incdir+../src -quiet ${filename} -work work -lint
    #vcom -2008 -novopt -quiet ${filename} -work work -lint
   } else {
    puts "## WARNING: File not found: ${filename}"
